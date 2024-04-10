@@ -1,0 +1,15 @@
+{% extends "first_app/base.html" %}
+
+<div class="container">
+    {% block body_block %}
+    <h1>Add Album</h1>
+
+    <form method="POST">
+        {{album_form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Add Musician" class='btn btn-primary'>
+    </form>
+    
+
+    {% endblock %}
+ </div>

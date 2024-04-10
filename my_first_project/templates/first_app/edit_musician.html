@@ -1,0 +1,14 @@
+{% extends "first_app/base.html" %}
+
+<div class="container">
+    {% block body_block %}
+    <h1> Edit Musician </h1>
+
+    <form method="POST">
+        {{musician_form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Update" class='btn btn-success'>
+    </form>
+
+    {% endblock %}
+ </div>
